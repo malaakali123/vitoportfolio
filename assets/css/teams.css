@@ -1,0 +1,413 @@
+/*=============== ABOUT PAGE CSS ===============*/
+@import url('styles.css');
+
+/* Default Theme (Light Mode) */
+/* Default Theme (Light Mode) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color, #000); /* Default text color black */
+  background-color: var(--background-color, #fff); /* Default background color white */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  --text-color: #fff; /* Text white */
+  --background-color: #000; /* Background black */
+}
+
+/* Components Adjustments for Dark Theme */
+.dark-theme h1, 
+.dark-theme h2, 
+.dark-theme h3 {
+  color: #fff; /* Headings white */
+}
+
+.dark-theme .intro-section,
+.dark-theme .join-team {
+  background-color: black; /* Dark gray background */
+  color: #ccc; /* Light gray text */
+}
+
+.dark-theme .team-members{
+  background-color: #000;
+}
+.dark-theme .meet-team{
+  background-color: #000;
+}
+.dark-theme .team-card{
+  background-color: #121212;
+}
+.dark-theme .apply-btn {
+  background-color: #4f46e5; /* Same button color */
+  color: #fff; /* Ensure button text remains visible */
+}
+
+/* Footer Adjustments */
+.dark-theme .footer {
+  background-color: #121212; /* Footer dark background */
+  color: #aaa; /* Footer light gray text */
+}
+
+.dark-theme .footer__social-link:hover {
+  color: #fff; /* Hover effect in white */
+}
+
+h1, h2, h3 {
+  color: #374151; /* Dark Gray */
+}
+
+p {
+  color: #6b7280; /* Gray */
+}
+
+/* ===================== TEAM INTRODUCTION ==================== */
+.main-content {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.intro-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-top: 4rem;
+  margin-bottom: 1.4rem; 
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+  background: linear-gradient(to right, #1b273d, #d7f6ff); /* Gradient blue color */
+  -webkit-background-clip: text; /* Text-only gradient */
+  -webkit-text-fill-color: transparent; /* Transparent background */
+  margin-bottom: var(--mb-2); /* Thoda extra gap ke liye */
+  animation: fadeIn 2s ease-in-out;
+}
+.sub-heading{
+  font-size: 1.6rem;
+  color: #6b7280;
+  margin: 3rem 2rem 2rem 2rem; /* Adds space at the top and bottom */
+  padding: 0.5rem 1rem;
+}
+
+.intro-text {
+  font-size: 0.9rem;
+  max-width: 75%;
+  margin: 0 auto 1.5rem auto;
+  text-align: justify;
+}
+
+.team-lead-img {
+  max-width: 400px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
+}
+
+/* ===================== MEET THE TEAM ==================== */
+.meet-team {
+  padding: 2rem;
+  background-color: #e5e7eb; /* Light Gray */
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1.4rem; 
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-semi-bold);
+  text-align: center;
+  background: linear-gradient(to right, #1b273d, #d7f6ff); /* Gradient blue color */
+  -webkit-background-clip: text; /* Text-only gradient */
+  -webkit-text-fill-color: transparent; /* Transparent background */
+  margin-bottom: var(--mb-2); /* Thoda extra gap ke liye */
+  animation: fadeIn 2s ease-in-out;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1.5rem; /* Reduced gap between cards */
+}
+
+.team-card {
+  background-color: white;
+  width: 100%;
+  max-width: 200px; /* Reduced max width */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px); /* Reduced hover effect */
+}
+
+.team-img {
+  width: 100%;
+  height: 120px; /* Reduced image height */
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+.team-name {
+  font-size: 1.15rem; /* Reduced font size */
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.team-role {
+  font-size: 0.9rem; /* Reduced font size */
+  color: #6b7280;
+}
+
+/* ===================== JOIN THE TEAM ==================== */
+.join-team {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.join-text {
+  font-size: 0.9em;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  margin-left: 3rem; /* Left side ka space */
+  margin-right: 3rem; /* Right side ka space */
+}
+
+.apply-btn {
+  background-color: #4f46e5; /* Indigo */
+  color: white;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.apply-btn:hover {
+  background-color: #4338ca; /* Darker Indigo */
+}
+
+
+/*=============== FOOTER ===============*/
+.footer__container{
+  row-gap: 3rem;
+}
+
+.footer__logo{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  color: var(--title-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: var(--mb-2-5);
+  transition: .3s;
+}
+
+.footer__logo-icon{
+  font-size: 1.15rem;
+  color: var(--first-color);
+}
+
+.footer__logo:hover{
+  color: var(--first-color);
+}
+
+.footer__title{
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1-5);
+}
+
+.footer__subscribe{
+  background-color: var(--first-color-lighten);
+  padding: .75rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: .5rem;
+}
+
+.footer__input{
+  width: 70%;
+  padding: 0 .5rem;
+  background: none;
+  color: var(--text-color);
+  border: none;
+  outline: none;
+}
+
+.footer__button{
+  padding: 1rem;
+}
+
+.footer__data{
+  display: grid;
+  row-gap: .75rem;
+}
+
+.footer__information{
+  font-size: var(--small-font-size);
+}
+
+.footer__social{
+  display: inline-flex;
+  column-gap: .75rem;
+}
+
+.footer__social-link{
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.footer__social-link:hover{
+  transform: translateY(-.25rem);
+}
+
+.footer__cards{
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+}
+.footer__card{
+  width: 35px;
+}
+
+.footer__copy{
+  text-align: center;
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+  margin: 5rem 0 1rem;
+}
+
+.dark-theme .footer {
+  background-color: #121212; /* Dark background */
+}
+
+@media (max-width: 768px) {
+  .team-members {
+    flex-direction: column; /* Stack team members vertically on smaller screens */
+  }
+
+  .intro-section{
+    text-align: justify;
+  }
+  .team-card {
+    width: 100%; /* Make team cards take full width */
+    max-width: none; /* Remove max-width on smaller screens */
+  }
+
+  .intro-text {
+    max-width: 90%; /* Increase text width on smaller screens */
+  }
+
+  .join-text {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+
+/* Responsive */
+
+/* Add this CSS at the end of your current styles */
+
+/* Mobile Devices (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  /* General Layout Adjustments */
+  .main-content {
+    padding: 1rem;
+  }
+
+  .intro-section {
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-text {
+    font-size: 0.85rem;
+    max-width: 100%;
+    text-align: justify;
+  }
+
+  .team-lead-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+  }
+
+  /* Team Section Adjustments */
+  .meet-team {
+    padding: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .team-card {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .team-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .team-name {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .team-role {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
+  /* Sub-headings */
+  .sub-heading {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 1rem 0;
+  }
+}
